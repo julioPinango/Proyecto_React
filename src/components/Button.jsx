@@ -3,5 +3,8 @@ export default function ButtonComponent({nombre, color}){
         backgroundColor:color,
         color:"white"
     }
-    return <button style={estilo}>{nombre}</button>
+    const handleClick = () => {
+        console.log(`estas en la seccion de ${nombre}`)
+    };
+    return <button onClick={handleClick} style={estilo}>{nombre}</button>
 }

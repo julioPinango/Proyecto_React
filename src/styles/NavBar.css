@@ -1,0 +1,46 @@
+/* src/styles/NavBar.css */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  padding: 10px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
