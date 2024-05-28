@@ -1,24 +1,28 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css'
-import TituloPirncipal from './components/TItuloPrincipal'
+import Home from './components/navigation/Home'
 import NavBar from './components/NavBar'
-import ContadorComponente from './components/ContadorComponente'
 import ItemListContainer from './components/ItemListContainerComponente'
-import ProductList from './components/ProductList';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ContactView from './components/navigation/ContactView'
+import MisComprasView from './components/navigation/MisComprasView'
+import SingleProduct from './components/navigation/SingleProduct';
+
 
 
 function App() {
 
   return (
     <>
-      <NavBar/>
-      <TituloPirncipal/>   
-      <ItemListContainer/>
-      <ProductList/>      
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route exact path='/' element={<Home/>} />
+          <Route exact path='/productos' element={<ItemListContainer/>} />
+          <Route exact path='/producto/:prodID' element={<SingleProduct/>} />
+          <Route exact path='/MisCompras' element={<MisComprasView/>} />
+          <Route exact path='/Contacto' element={<ContactView/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

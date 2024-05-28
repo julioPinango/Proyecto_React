@@ -4,6 +4,7 @@ import ButtonComponent from "./Button";
 import CartWidget from "./CartWidgetComponente";
 import '../styles/NavBar.css';
 import SearchComponente from './SearchComponente';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,16 +29,24 @@ export default function NavBar() {
           {menuOpen && (
             <ul onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               <li>
+                <Link to={'/'}>
                 <ButtonComponent nombre="Inicio" color="blue" />
+                </Link>
               </li>
               <li>
-                <ButtonComponent nombre="Categorías" color="blue" />
+                <Link to={'/productos'}>
+                <ButtonComponent nombre="Productos" color="blue" />
+                </Link>
               </li>
               <li>
+                <Link to={'/MisCompras'}>
                 <ButtonComponent nombre="Mis Compras" color="blue" />
+                </Link>
               </li>
               <li>
-                <ButtonComponent nombre="Contactos" color="blue" />
+                <Link to={'/Contacto'}>
+                <ButtonComponent nombre="Contacto" color="blue" />
+                </Link>
               </li>
             </ul>
           )}

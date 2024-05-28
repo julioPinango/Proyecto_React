@@ -44,3 +44,10 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
+h2{
+  position: center;
+  width: 100%;
+  padding: 30px;
+  
+}
