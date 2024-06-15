@@ -1,0 +1,99 @@
+/* Estilos generales para el header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header .container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo {
+    max-height: 120px; /* Tamaño más grande para el logo */
+}
+
+.header .nombre-img {
+    max-height: 100px; /* Tamaño más grande para el nombre */
+    margin-left: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.submenu {
+    position: absolute;
+    top: 50px;
+    list-style: none;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+}
+
+.nav-menu li:hover .submenu {
+    display: block;
+}
+
+.toggle-dark-mode-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Light Mode */
+.light-mode .header {
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    color: #333333;
+}
+
+.light-mode .nav-pills .nav-link {
+    color: #333333;
+}
+
+.light-mode .nav-pills .nav-link.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.light-mode .toggle-dark-mode-btn {
+    color: #333333;
+}
+
+/* Dark Mode */
+.dark-mode .header {
+    background-color: #000000; /* Color de fondo negro */
+    color: #ffffff;
+}
+
+.dark-mode .nav-pills .nav-link {
+    color: #ffffff;
+}
+
+.dark-mode .nav-pills .nav-link.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.dark-mode .toggle-dark-mode-btn {
+    color: #ffffff;
+}
